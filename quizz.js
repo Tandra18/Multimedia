@@ -449,12 +449,24 @@ const resultText = document.getElementById('result-text');
 const restartButton = document.getElementById('restart-button');
 const progressBar = document.getElementById('progress');
 
+// Function to shuffle an array
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+    }
+    return array;
+}
+
 function loadQuestion() {
     const currentQuestion = selectedQuizzes[currentQuestionIndex];
     questionElement.textContent = currentQuestion.question;
     optionsContainer.innerHTML = '';
 
-    currentQuestion.options.forEach(option => {
+    // Shuffle the options before displaying them
+    const shuffledOptions = shuffleArray(currentQuestion.options);
+
+    shuffledOptions.forEach(option => {
         const button = document.createElement('button');
         button.textContent = option;
         button.classList.add('option');
