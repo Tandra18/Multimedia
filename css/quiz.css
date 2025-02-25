@@ -1,0 +1,311 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('../images/mental.jpeg'); /* Replace with your image URL */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: mediumpurple; /* Gradient effect */
+    color: white;
+    padding: 8px 5px; /* Reduced padding for a smaller height */
+    text-align: center;
+    font-size: 14px; /* Slightly adjusted font size */
+    font-weight: bold;
+    letter-spacing: 1px; /* Better text readability */
+    border-radius: 10px; /* Reduced rounding for a more compact look */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* Slightly lighter shadow */
+    margin: 5px auto; /* Keeps spacing balanced */
+    width: 95%; /* Keeps it responsive */
+    min-height: 30px; /* Ensures a smaller height */
+    line-height: 1.2; /* Adjusts text spacing for better compactness */
+
+}
+
+
+
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header p {
+    font-size: 1.2rem;
+    animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#quiz-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+#progress {
+    height: 100%;
+    width: 0;
+    background-color: #6c5ce7;
+    transition: width 0.5s ease;
+}
+
+#question-container {
+    margin-bottom: 20px;
+}
+
+#question {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+#options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    background-color: royalblue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5a4fcf;
+}
+
+#next-button {
+    display: none;
+    margin-top: 20px;
+}
+
+/* Ensure the result container has a lower z-index than the celebration */
+#result-container {
+    position: relative; /* Ensure it stays in the normal flow */
+    z-index: 1; /* Lower than the celebration animation */
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+#result-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 5px; /* Reduced padding */
+    background-color: mediumpurple;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    min-height: 30px; /* Ensures a smaller height */
+    font-size: 14px; /* Adjusted font size for balance */
+}
+
+
+nav {
+    background-color: royalblue; /* Set background color */
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; /* Default text color */
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px 12px; /* Add some padding for better spacing */
+    border-radius: 5px; /* Slight rounding for a smoother effect */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+nav ul li a:hover {
+    color: white; /* Changes text color on hover */
+    background-color: lightblue; /* Adds a cool background effect */
+    box-shadow: 0 0 10px lightblue; /* Subtle glow effect */
+    transform: scale(1.1); /* Slight zoom effect for emphasis */
+}
+
+/* Celebration Animation Styles */
+#celebration {
+    position: absolute; /* Change to absolute positioning */
+    top: 0; /* Position at the top of the parent container */
+    left: 0; /* Position at the left of the parent container */
+    width: 100%; /* Cover the entire width of the parent */
+    height: 100%; /* Cover the entire height of the parent */
+    overflow: hidden;
+    text-align: center;
+    z-index: 2; /* Higher z-index to place it above the result container */
+    pointer-events: none; /* Ensure clicks pass through to the result container */
+}
+
+.floating {
+    position: absolute;
+    animation: float 6s infinite ease-in-out;
+}
+
+#balloons {
+    width: 100px;
+    height: 150px;
+    background: url('../images/flower.png') no-repeat center center/contain;
+    left: 5%; /* Horizontal position */
+    top: 20px; /* Move down by 20px */
+    animation-delay: 0s;
+}
+
+#flowers {
+    width: 100px;
+    height: 150px;
+    background: url('../images/flower.png') no-repeat center center/contain;
+    right: 5%; /* Horizontal position */
+    top: 20px; /* Move down by 20px */
+    animation-delay: 0s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.congratulations-text {
+    font-size: 24px;
+    color: #4CAF50;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+/* Ribbon Styles */
+#ribbons {
+    position: absolute;
+    top: -100px; /* Start above the visible area */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Ensure clicks pass through */
+}
+
+.ribbon {
+    position: absolute;
+    width: 50px; /* Width of each ribbon */
+    height: 100px; /* Height of each ribbon */
+    background: url('../images/heart.png') no-repeat center center/contain; /* Add your ribbon image */
+    animation: fall linear infinite;
+}
+
+/* Ribbon Falling Animation */
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg); /* Start above the screen */
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg); /* Fall to the bottom of the screen */
+    }
+}
+
+/* Delay for each ribbon */
+.ribbon:nth-child(1) {
+    left: 10%;
+    animation-duration: 5s;
+    animation-delay: 0s;
+}
+
+.ribbon:nth-child(2) {
+    left: 30%;
+    animation-duration: 6s;
+    animation-delay: 1s;
+}
+
+.ribbon:nth-child(3) {
+    left: 50%;
+    animation-duration: 7s;
+    animation-delay: 2s;
+}
+
+.ribbon:nth-child(4) {
+    left: 70%;
+    animation-duration: 8s;
+    animation-delay: 3s;
+}
+
+.ribbon:nth-child(5) {
+    left: 90%;
+    animation-duration: 9s;
+    animation-delay: 4s;
+}
+
