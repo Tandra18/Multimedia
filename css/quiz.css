@@ -14,16 +14,16 @@ body {
 header {
     background: mediumpurple; /* Gradient effect */
     color: white;
-    padding: 8px 5px; /* Reduced padding for a smaller height */
+    padding: 2px 1px; /* Reduced padding for a smaller height */
     text-align: center;
-    font-size: 14px; /* Slightly adjusted font size */
+    font-size: 10px; /* Slightly adjusted font size */
     font-weight: bold;
     letter-spacing: 1px; /* Better text readability */
     border-radius: 10px; /* Reduced rounding for a more compact look */
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* Slightly lighter shadow */
     margin: 5px auto; /* Keeps spacing balanced */
     width: 95%; /* Keeps it responsive */
-    min-height: 30px; /* Ensures a smaller height */
+    min-height: 10px; /* Ensures a smaller height */
     line-height: 1.2; /* Adjusts text spacing for better compactness */
 
 }
@@ -145,7 +145,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    min-height: 30px; /* Ensures a smaller height */
+    min-height: 10px; /* Ensures a smaller height */
     font-size: 14px; /* Adjusted font size for balance */
 }
 
