@@ -17,8 +17,6 @@
         <li><a href="#">Quiz</a></li>
         <li><a href="#">Stories</a></li>
         <li><a href="discussion.html">Discuss</a></li>
-        <li><a href="#">About</a></li>
-
     </ul>
 </nav>
 <header>
@@ -81,6 +79,11 @@
     <source src="quiz-song.m4a" type="audio/mp3">
     Your browser does not support the audio element.
 </audio>
+<!-- Clapping sound effect -->
+<audio id="clapping-sound">
+    <source src="clap.m4a" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
 
 <script src="js/quiz.js"></script>
 <script>
@@ -89,11 +92,20 @@
     const pauseButton = document.getElementById("pause-music");
     const resultContainer = document.getElementById("result-container");
     const celebrationSection = document.getElementById("celebration");
+    const clappingSound = document.getElementById("clapping-sound");
+    const restartButton = document.getElementById("restart-button");
+
+    // Stop clapping sound when restarting the quiz
+    restartButton.addEventListener("click", () => {
+        clappingSound.pause();
+        clappingSound.currentTime = 0; // Reset sound to beginning
+    });
 
     // Function to show the celebration animation when quiz is completed
     function showCelebration() {
         celebrationSection.classList.remove("hidden"); // Show celebration animation
         resultContainer.classList.add("hidden"); // Hide result section
+        clappingSound.play(); // Play clapping sound
     }
 
     // Play music
@@ -112,6 +124,7 @@
 
     // Simulate the celebration when quiz is completed
     setTimeout(showCelebration, 2000); // Show animation after 2 seconds
+
 
 </script>
 </body>

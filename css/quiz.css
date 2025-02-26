@@ -151,7 +151,7 @@ footer {
 
 
 nav {
-    background-color: royalblue; /* Set background color */
+    background-color: darkblue; /* Set background color */
     padding: 10px 0;
     text-align: center;
     margin-bottom: 15px;
@@ -309,3 +309,9 @@ nav ul li a:hover {
     animation-delay: 4s;
 }
 
+.music-btn {
+    font-size: 10px; /* Reduce icon size */
+    padding: 5px 10px; /* Reduce button padding */
+    width: 30px; /* Adjust button width */
+    height: 30px; /* Adjust button height */
+}
