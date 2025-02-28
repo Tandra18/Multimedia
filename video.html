@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Therapy</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/video.css">
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="audio.html">Audio</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="story.html">Stories</a></li>
+        <li><a href="discussion.html">Discuss</a></li>
+    </ul>
+</nav>
+<header>
+    <h1>Video Therapy</h1>
+</header>
+<main>
+    <section id="video-section">
+        <h2>Watch Therapy Videos</h2>
+        <div class="video-wrapper">
+            <iframe id="videoFrame"
+                src="https://www.youtube.com/embed/zPyg4N7bcHM"
+                title="Therapy Video 1"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="video-controls">
+            <button id="prevButton" disabled>Previous</button>
+            <button id="nextButton">Next</button>
+        </div>
+    </section>
+  </main>
+<footer>
+    <p>© Looking for support? Try Video Therapy today!</p>
+</footer>
+<script>
+    // Array of YouTube video IDs (update these with your actual video IDs)
+    const videoIds = [
+        "zPyg4N7bcHM", // Video 1
+        "n3Xv_g3g-mA?si=DAUBgIqRa3Njh3mw", // Video 2
+        "kWcQyEHRudE?si=mOpi5SKs7-dNIH1n", // Video 3
+        "xG1PnPc3szA?si=EKogm97rjANOo7RL", // Video 4
+    ];
+
+    let currentIndex = 0;
+    const videoFrame = document.getElementById("videoFrame");
+    const prevButton = document.getElementById("prevButton");
+    const nextButton = document.getElementById("nextButton");
+
+    // Function to update the iframe src with the current video ID
+    function updateVideo() {
+        videoFrame.src = "https://www.youtube.com/embed/" + videoIds[currentIndex];
+        // Disable previous button if at start, next if at end
+        prevButton.disabled = currentIndex === 0;
+        nextButton.disabled = currentIndex === videoIds.length - 1;
+    }
+
+    // Event listeners for the buttons
+    nextButton.addEventListener("click", function() {
+        if (currentIndex < videoIds.length - 1) {
+            currentIndex++;
+            updateVideo();
+        }
+    });
+
+    prevButton.addEventListener("click", function() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateVideo();
+        }
+    });
+  </script>
+<script src="js/story.js"></script> <!-- Link to external JavaScript -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const playButton = document.getElementById("play-music");
+        const pauseButton = document.getElementById("pause-music");
+        const backgroundMusic = document.getElementById("background-music");
+
+        // Play music when play button is clicked
+        playButton.addEventListener("click", function () {
+            backgroundMusic.play();
+            playButton.style.display = "none"; // Hide play button
+            pauseButton.style.display = "inline-block"; // Show pause button
+        });
+
+        // Pause music when pause button is clicked
+        pauseButton.addEventListener("click", function () {
+            backgroundMusic.pause();
+            playButton.style.display = "inline-block"; // Show play button
+            pauseButton.style.display = "none"; // Hide pause button
+        });
+    });
+
+</script>
+</body>
+</html>

@@ -132,7 +132,7 @@ nav ul li a:hover {
     margin: 20px auto;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.4);
-    border-radius: 8px;
+    border-radius: 30px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     /* Fade-in effect */
     animation: fadeIn 1s ease-out;
@@ -150,7 +150,7 @@ nav ul li a:hover {
     /*padding: 5px;*/
     margin: 0 auto 10px; /* Center the textarea horizontally */
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 10px;
     /*resize: vertical;*/
     display: block; /* Ensure it behaves as a block-level element */
     max-width: 100%; /* Ensures it stays within the form */
@@ -183,7 +183,7 @@ nav ul li a:hover {
     margin-bottom: 15px;
     /*background-color: rgba(255, 255, 255, 0.4);*/
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 20px;
     max-width: 100%; /* Ensures comments don't exceed the container */
     overflow: hidden;
 }
@@ -216,7 +216,7 @@ nav ul li a:hover {
     /*padding: 5px;*/
     margin-bottom: 5px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 10px;
     resize: vertical;
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -245,7 +245,7 @@ nav ul li a:hover {
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.4);
     border-left: 3px solid #ccc;
-    border-radius: 4px;
+    border-radius: 20px;
     /* Fade-in effect */
     animation: fadeIn 1s ease-out;
 }

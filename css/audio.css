@@ -122,3 +122,57 @@ nav ul li a:hover {
     box-shadow: 0 0 10px lightblue; /* Subtle glow effect */
     transform: scale(1.1); /* Slight zoom effect for emphasis */
 }
+
+.audio-container {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto 25px;
+    overflow-y: auto;
+
+    /* Fade-in effect */
+    animation: fadeIn 1s ease-out;
+}
+
+.audio-item {
+    background: linear-gradient(135deg, rgba(144, 238, 144, 0.8), rgba(30, 144, 255, 0.5));
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.audio-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+.audio-item h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.audio-item button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+.audio-item button:hover {
+    background: #0056b3;
+}
+
+
+audio {
+    width: 100%;
+    margin-top: 10px;
+}

@@ -11,7 +11,7 @@
 <!-- Navigation Bar -->
 <nav>
   <ul>
-    <li><a href="home.html">Home</a></li>
+    <li><a href="index.html">Home</a></li>
     <li><a href="video.html">Video</a></li>
     <li><a href="audio.html">Audio</a></li>
     <li><a href="quiz.html">Quiz</a></li>
@@ -24,8 +24,61 @@
 </header>
 
 <main>
+  <div class="audio-container">
+    <div class="audio-list">
+      <script>
+        const audioFiles = [
+          'Guided Mindfulness Meditation.mp3',
+          '10 Minute Guided Meditation for Positive Energy, Peace & Light.mp3',
+          'Guided_Meditation_For_Reprogramming_Your_Mind.mp3',
+          'Breathe_With_Me_â___Nervous_System_Regulation_&_Healing.mp3',
+          'ANYTHING_You_Wish_Will_Happen_-_A_Powerful_Message_from_Sadhguru.mp3',
+          'Guided_Meditation_for_Anxiety_&_Stress.mp3',
+          '10_Minute_Guided_Meditation_for_Positivity,_Gratitude_&_Joy_â_¨_Raise_Your_Vibration.mp3',
+          'The_Powerful_Release_of_Letting_Go!__Guided_Meditation.mp3',
+          'Sound_Bath_Guided_Meditation___Sound_Healing_&_Deep_Relaxation.mp3',
+          'Guided_Meditation_for_Courage_&_Confidence_ð____15_min.mp3',
+          '15_Minute_Meditation_for_Intuition,_Confidence,_Inner_Strength___30_Day_Meditation_Challenge.mp3',
+          '5_Minute_Meditation_for_Relaxation_&_Positive_Energy___30_Day_Meditation_Challenge.mp3',
+          'Powerful_Guided_Meditation_for_Healing_&_Letting_Go.mp3',
+          'New_Year_Reflection_Guided_Meditation_Journaling_Transform_Your_Life.mp3'
+        ];
 
+        let currentAudio = null; // Track currently playing audio
+
+        document.write('<div class="audio-items">');
+        audioFiles.forEach(file => {
+          const formattedName = file.replace(/_/g, ' ').replace(/\.mp3$/, '');
+          document.write(`
+      <div class="audio-item">
+        <h3>${formattedName}</h3>
+        <audio controls>
+          <source src="static/${file}" type="audio/mp3">
+        </audio>
+      </div>
+    `);
+        });
+        document.write('</div>');
+
+        // Wait until the DOM is loaded to add event listeners
+        window.onload = function() {
+          const audioElements = document.querySelectorAll("audio");
+
+          audioElements.forEach(audio => {
+            audio.addEventListener("play", function () {
+              if (currentAudio && currentAudio !== this) {
+                currentAudio.pause(); // Pause the previously playing audio
+                currentAudio.currentTime = 0; // Reset playback position
+              }
+              currentAudio = this; // Set the new active audio
+            });
+          });
+        };
+      </script>
+    </div>
+  </div>
 </main>
+
 
 <footer>
   <p>© Take a step towards understanding mental health. Listen some audio guided therapy!</p>
@@ -33,6 +86,6 @@
 
 
 
-<script src=""></script> <!-- Link to external JavaScript -->
+<script src="js/audio.js"></script> <!-- Link to external JavaScript -->
 </body>
 </html>
