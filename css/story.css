@@ -65,6 +65,16 @@ main {
     margin: 0 auto 25px;
     /* Fixed height for the section */
     overflow-y: auto; /* Allow scrolling if content exceeds the fixed height */
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 #story-title {
@@ -186,14 +196,15 @@ button:hover {
 
 footer {
     text-align: center;
-    padding: 5px; /* Reduced padding */
+    padding: 5px; /* Reduce padding further */
     background-color: mediumpurple;
     color: white;
     position: fixed;
     bottom: 0;
     width: 100%;
-    min-height: 10px; /* Ensures a smaller height */
-    font-size: 14px; /* Adjusted font size for balance */
+    min-height: 5px; /* Reduce the minimum height */
+    font-size: 12px; /* Reduce font size slightly if needed */
+    line-height: 1; /* Adjust line height to keep text compact */
 }
 
 

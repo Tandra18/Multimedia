@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url('../images/quiz.jpg'); /* Replace with your image URL */
+    background-image: url('../images/green-landscape.jpg'); /* Replace with your image URL */
     background-size: cover; /* Ensures the image covers the entire background */
     /*background-position: center; !* Centers the image *!*/
     background-repeat: no-repeat; /* Prevents the image from repeating */
@@ -76,14 +76,15 @@ button:hover {
 
 footer {
     text-align: center;
-    padding: 5px; /* Reduced padding */
+    padding: 5px; /* Reduce padding further */
     background-color: mediumpurple;
     color: white;
     position: fixed;
     bottom: 0;
     width: 100%;
-    min-height: 10px; /* Ensures a smaller height */
-    font-size: 14px; /* Adjusted font size for balance */
+    min-height: 5px; /* Reduce the minimum height */
+    font-size: 12px; /* Reduce font size slightly if needed */
+    line-height: 1; /* Adjust line height to keep text compact */
 }
 
 
