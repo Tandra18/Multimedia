@@ -15,7 +15,7 @@
         <li><a href="#">Video</a></li>
         <li><a href="#">Audio</a></li>
         <li><a href="#">Quiz</a></li>
-        <li><a href="#">Stories</a></li>
+        <li><a href="story.html">Stories</a></li>
         <li><a href="discussion.html">Discuss</a></li>
     </ul>
 </nav>
@@ -65,8 +65,6 @@
                 <i class="fas fa-pause"></i>
             </button>
         </div>
-
-
     </section>
 </main>
 
@@ -101,12 +99,12 @@
         clappingSound.currentTime = 0; // Reset sound to beginning
     });
 
-    // Function to show the celebration animation when quiz is completed
-    function showCelebration() {
-        celebrationSection.classList.remove("hidden"); // Show celebration animation
-        resultContainer.classList.add("hidden"); // Hide result section
-        clappingSound.play(); // Play clapping sound
-    }
+    // // Function to show the celebration animation when quiz is completed
+    // function showCelebration() {
+    //     celebrationSection.classList.remove("hidden"); // Show celebration animation
+    //     resultContainer.classList.add("hidden"); // Hide result section
+    //     clappingSound.play(); // Play clapping sound
+    // }
 
     // Play music
     playButton.addEventListener("click", () => {

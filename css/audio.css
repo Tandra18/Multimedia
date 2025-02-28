@@ -1,0 +1,123 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('../images/quiz.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Ensures the image covers the entire background */
+    /*background-position: center; !* Centers the image *!*/
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the background image still */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: mediumpurple; /* Gradient effect */
+    color: white;
+    padding: 2px 1px; /* Reduced padding for a smaller height */
+    text-align: center;
+    font-size: 10px; /* Slightly adjusted font size */
+    font-weight: bold;
+    letter-spacing: 1px; /* Better text readability */
+    border-radius: 10px; /* Reduced rounding for a more compact look */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* Slightly lighter shadow */
+    margin: 5px auto; /* Keeps spacing balanced */
+    width: 95%; /* Keeps it responsive */
+    min-height: 10px; /* Ensures a smaller height */
+    line-height: 1.2; /* Adjusts text spacing for better compactness */
+
+}
+
+
+
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header p {
+    font-size: 1.2rem;
+    animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+button {
+    background-color: royalblue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5a4fcf;
+}
+
+#next-button {
+    display: none;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 5px; /* Reduced padding */
+    background-color: mediumpurple;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    min-height: 10px; /* Ensures a smaller height */
+    font-size: 14px; /* Adjusted font size for balance */
+}
+
+
+nav {
+    background-color: darkblue; /* Set background color */
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; /* Default text color */
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px 12px; /* Add some padding for better spacing */
+    border-radius: 5px; /* Slight rounding for a smoother effect */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+nav ul li a:hover {
+    color: white; /* Changes text color on hover */
+    background-color: lightblue; /* Adds a cool background effect */
+    box-shadow: 0 0 10px lightblue; /* Subtle glow effect */
+    transform: scale(1.1); /* Slight zoom effect for emphasis */
+}

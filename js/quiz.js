@@ -529,6 +529,7 @@ function showCelebration() {
     celebrationSection.classList.remove("hidden"); // Show celebration animation
     // resultContainer.classList.add("hidden"); // Hide result section
 
+
 }
 
 // Function to restart the quiz and show the music section again

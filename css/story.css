@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url('../images/quiz.jpg'); /* Replace with your image URL */
+    background-image: url('../images/digital-art.jpg'); /* Replace with your image URL */
     background-size: cover; /* Ensures the image covers the entire background */
     /*background-position: center; !* Centers the image *!*/
     background-repeat: no-repeat; /* Prevents the image from repeating */
@@ -29,7 +29,9 @@ header {
 
 }
 
-
+footer{
+    margin-top: 25px;
+}
 
 
 header h1 {
@@ -64,6 +66,30 @@ main {
     /* Fixed height for the section */
     overflow-y: auto; /* Allow scrolling if content exceeds the fixed height */
 }
+
+#story-title {
+    color: darkred; /* Vibrant red */
+    font-size: 28px; /* Larger title */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    font-family: 'Arial', sans-serif; /* Clean font */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#story {
+    color: black; /* Attractive blue */
+    font-size: 18px;
+    line-height: 1.6; /* Better readability */
+    font-family: 'Georgia', serif; /* Elegant font */
+    text-align: justify;
+    background-color: rgba(0, 0, 0, 0.05); /* Light background for contrast */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 
 #progress-bar {
     width: 100%;
@@ -111,27 +137,38 @@ button:hover {
     background-color: #5a4fcf;
 }
 
+/* Next button styling */
 #next-button {
-    display: none;
-    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(45deg, #ff6600, #ff3300);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    margin-top: 15px;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    float: right; /* Align the button to the right */
+}
+
+#next-button:hover {
+    background: linear-gradient(45deg, #ff3300, #cc0000);
+    transform: scale(1.05);
 }
 
 /* Ensure the result container has a lower z-index than the celebration */
 #result-container {
     position: relative; /* Ensure it stays in the normal flow */
     z-index: 1; /* Lower than the celebration animation */
-    background-color: rgba(249, 249, 249, 0.1); /* Adjust the last value (0.0 to 1.0) for transparency */
+    background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
     margin-top: 20px;
 }
-
-#resultText {
-    font-weight: bold;
-}
-
 
 @keyframes slideIn {
     from { transform: translateY(20px); opacity: 0; }
@@ -195,133 +232,3 @@ nav ul li a:hover {
     transform: scale(1.1); /* Slight zoom effect for emphasis */
 }
 
-/* Celebration Animation Styles */
-#celebration {
-    position: absolute; /* Change to absolute positioning */
-    top: 0; /* Position at the top of the parent container */
-    left: 0; /* Position at the left of the parent container */
-    width: 100%; /* Cover the entire width of the parent */
-    height: 100%; /* Cover the entire height of the parent */
-    overflow: hidden;
-    text-align: center;
-    z-index: 2; /* Higher z-index to place it above the result container */
-    pointer-events: none; /* Ensure clicks pass through to the result container */
-}
-
-.floating {
-    position: absolute;
-    animation: float 6s infinite ease-in-out;
-}
-
-#balloons {
-    width: 100px;
-    height: 150px;
-    background: url('../images/flower.png') no-repeat center center/contain;
-    left: 5%; /* Horizontal position */
-    top: 20px; /* Move down by 20px */
-    animation-delay: 0s;
-}
-
-#flowers {
-    width: 100px;
-    height: 150px;
-    background: url('../images/flower.png') no-repeat center center/contain;
-    right: 5%; /* Horizontal position */
-    top: 20px; /* Move down by 20px */
-    animation-delay: 0s;
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-}
-
-.congratulations-text {
-    font-size: 24px;
-    color: #4CAF50;
-    margin-top: 20px;
-    animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.hidden {
-    display: none;
-}
-
-/* Ribbon Styles */
-#ribbons {
-    position: absolute;
-    top: -100px; /* Start above the visible area */
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* Ensure clicks pass through */
-}
-
-.ribbon {
-    position: absolute;
-    width: 50px; /* Width of each ribbon */
-    height: 100px; /* Height of each ribbon */
-    background: url('../images/heart.png') no-repeat center center/contain; /* Add your ribbon image */
-    animation: fall linear infinite;
-}
-
-/* Ribbon Falling Animation */
-@keyframes fall {
-    0% {
-        transform: translateY(-100px) rotate(0deg); /* Start above the screen */
-    }
-    100% {
-        transform: translateY(100vh) rotate(360deg); /* Fall to the bottom of the screen */
-    }
-}
-
-/* Delay for each ribbon */
-.ribbon:nth-child(1) {
-    left: 10%;
-    animation-duration: 5s;
-    animation-delay: 0s;
-}
-
-.ribbon:nth-child(2) {
-    left: 30%;
-    animation-duration: 6s;
-    animation-delay: 1s;
-}
-
-.ribbon:nth-child(3) {
-    left: 50%;
-    animation-duration: 7s;
-    animation-delay: 2s;
-}
-
-.ribbon:nth-child(4) {
-    left: 70%;
-    animation-duration: 8s;
-    animation-delay: 3s;
-}
-
-.ribbon:nth-child(5) {
-    left: 90%;
-    animation-duration: 9s;
-    animation-delay: 4s;
-}
-
-.music-btn {
-    font-size: 10px; /* Reduce icon size */
-    padding: 5px 10px; /* Reduce button padding */
-    width: 30px; /* Adjust button width */
-    height: 30px; /* Adjust button height */
-}

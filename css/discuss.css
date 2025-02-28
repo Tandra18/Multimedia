@@ -15,6 +15,7 @@ body {
     background-size: cover; /* Ensures the image covers the entire background */
     /*background-position: center; !* Centers the image *!*/
     background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the background image still */
     color: #333;
     margin: 0;
     padding: 0;
@@ -130,7 +131,7 @@ nav ul li a:hover {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -152,6 +153,7 @@ nav ul li a:hover {
     display: block; /* Ensure it behaves as a block-level element */
     max-width: 100%; /* Ensures it stays within the form */
     box-sizing: border-box; /* Ensures padding doesn't increase the width */
+    /*background-color: rgba(255, 255, 255, 0.4);*/
 }
 
 #comment-form button {
@@ -177,7 +179,7 @@ nav ul li a:hover {
 .comment {
     padding: 15px;
     margin-bottom: 15px;
-    background-color: #fff;
+    /*background-color: rgba(255, 255, 255, 0.4);*/
     border: 1px solid #ddd;
     border-radius: 4px;
     max-width: 100%; /* Ensures comments don't exceed the container */
@@ -197,7 +199,8 @@ nav ul li a:hover {
 }
 
 .comment .reply-form {
-    margin-top: 10px;
+    margin-top: 20px;
+    /*background-color: rgba(255, 255, 255, 0.4);*/
     word-wrap: break-word;
     overflow-wrap: break-word;
     white-space: pre-wrap; /* Preserves line breaks while wrapping long words */
@@ -236,7 +239,7 @@ nav ul li a:hover {
     margin-left: 20px;
     margin-top: 10px;
     padding: 10px;
-    background-color: #f1f1f1;
+    background-color: rgba(255, 255, 255, 0.4);
     border-left: 3px solid #ccc;
     border-radius: 4px;
 }
