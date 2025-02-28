@@ -323,8 +323,8 @@ nav ul li a:hover {
 }
 
 .music-btn {
-    font-size: 10px; /* Reduce icon size */
-    padding: 5px 10px; /* Reduce button padding */
-    width: 30px; /* Adjust button width */
-    height: 30px; /* Adjust button height */
+    padding: 10px 16px;
+    margin-top: 5px;
+    font-size: 14px;
+    border-radius: 8px;
 }

@@ -147,6 +147,27 @@ button:hover {
     background-color: #5a4fcf;
 }
 
+.music-btn {
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(45deg, #ff6600, #ff3300);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    margin-top: 5px;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    float: left; /* Align the button to the right */
+}
+
+.music-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+
+
 /* Next button styling */
 #next-button {
     position: relative;
@@ -155,7 +176,7 @@ button:hover {
     color: white;
     border: none;
     padding: 10px 16px;
-    margin-top: 15px;
+    margin-top: 5px;
     font-size: 14px;
     border-radius: 8px;
     cursor: pointer;

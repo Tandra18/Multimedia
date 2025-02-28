@@ -31,6 +31,16 @@
                 <p id="story"></p> <!-- Story content will be displayed here -->
             </div>
         </div>
+        <!-- Music Section -->
+        <div id="music-section">
+            <p><strong>Want to listen some relaxing music?</strong></p>
+            <button id="play-music" class="music-btn">
+                <i class="fas fa-play"></i>
+            </button>
+            <button id="pause-music" class="music-btn" style="display: none;">
+                <i class="fas fa-pause"></i>
+            </button>
+        </div>
         <button id="next-button" data-index="0">Next Story</button>
     </section>
 </main>
@@ -38,9 +48,33 @@
 <footer>
     <p>© Take a step towards understanding mental health. Read some personal stories!</p>
 </footer>
-
-
-
+<!-- Background music -->
+<audio id="background-music" loop>
+    <source src="quiz-song.m4a" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
 <script src="js/story.js"></script> <!-- Link to external JavaScript -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const playButton = document.getElementById("play-music");
+        const pauseButton = document.getElementById("pause-music");
+        const backgroundMusic = document.getElementById("background-music");
+
+        // Play music when play button is clicked
+        playButton.addEventListener("click", function () {
+            backgroundMusic.play();
+            playButton.style.display = "none"; // Hide play button
+            pauseButton.style.display = "inline-block"; // Show pause button
+        });
+
+        // Pause music when pause button is clicked
+        pauseButton.addEventListener("click", function () {
+            backgroundMusic.pause();
+            playButton.style.display = "inline-block"; // Show play button
+            pauseButton.style.display = "none"; // Hide pause button
+        });
+    });
+
+</script>
 </body>
 </html>
