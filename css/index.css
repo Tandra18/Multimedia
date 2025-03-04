@@ -1,0 +1,184 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('../images/digital-art-one.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Ensures the image covers the entire background */
+    /*background-position: center; !* Centers the image *!*/
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the background image still */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: mediumpurple; /* Gradient effect */
+    color: white;
+    padding: 2px 1px; /* Reduced padding for a smaller height */
+    text-align: center;
+    font-size: 10px; /* Slightly adjusted font size */
+    font-weight: bold;
+    letter-spacing: 1px; /* Better text readability */
+    border-radius: 10px; /* Reduced rounding for a more compact look */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* Slightly lighter shadow */
+    margin: 5px auto; /* Keeps spacing balanced */
+    width: 95%; /* Keeps it responsive */
+    min-height: 10px; /* Ensures a smaller height */
+    line-height: 1.2; /* Adjusts text spacing for better compactness */
+
+}
+
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header p {
+    font-size: 1.2rem;
+    animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 5px; /* Reduce padding further */
+    background-color: mediumpurple;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    min-height: 5px; /* Reduce the minimum height */
+    font-size: 12px; /* Reduce font size slightly if needed */
+    line-height: 1; /* Adjust line height to keep text compact */
+}
+
+
+nav {
+    background-color: darkblue; /* Set background color */
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; /* Default text color */
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px 12px; /* Add some padding for better spacing */
+    border-radius: 5px; /* Slight rounding for a smoother effect */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+nav ul li a:hover {
+    color: white; /* Changes text color on hover */
+    background-color: lightblue; /* Adds a cool background effect */
+    box-shadow: 0 0 10px lightblue; /* Subtle glow effect */
+    transform: scale(1.1); /* Slight zoom effect for emphasis */
+}
+
+.text-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.4); /* Adjust transparency (0 = fully transparent, 1 = fully opaque) */
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+section {
+    background: #e3f2fd;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+section h2 {
+    color: #0077b6;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 16px;
+    color: #444;
+}
+
+section i {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #0077b6;
+}
+
+.quote {
+    text-align: center;
+    font-style: italic;
+    font-size: 18px;
+    color: #555;
+    padding: 20px;
+    background: #dfe9f3;
+    border-radius: 8px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0077b6;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.read-more:hover {
+    color: #005082;
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

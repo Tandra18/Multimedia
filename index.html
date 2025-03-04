@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="audio.html">Audio</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="story.html">Stories</a></li>
+        <li><a href="discussion.html">Discuss</a></li>
+    </ul>
+</nav>
+<header>
+    <h1>Home Page</h1>
+  </header>
+    <div class="text-container">
+
+        <div class="container">
+            <section>
+                <h2>Our Purpose</h2>
+                <p>The purpose of a mental health awareness webpage is to educate,
+                    support, and empower individuals by providing reliable information, resources, and tools to promote mental well-being.
+                    <span class="more-text" style="display: none;">
+                       It aims to break the stigma surrounding mental health issues, encourage open conversations, and offer guidance on recognizing symptoms, seeking professional help, and adopting self-care strategies. By fostering a supportive online community, the webpage helps individuals feel understood, validated, and encouraged to prioritize their mental health.
+                    </span>
+                    <a href="javascript:void(0);" class="read-more" onclick="toggleText(this)">Read More</a>
+                </p>
+            </section>
+            <section>
+                <h2>Audio Resources</h2>
+                <p>Our curated audio resources, including guided meditations and calming music, are designed to reduce stress and promote relaxation, aiding in mental health improvement.</p>
+            </section>
+            <section>
+                <h2>Video Resources</h2>
+                <p>Explore our collection of videos featuring mental health experts discussing coping strategies, mindfulness practices, and personal stories to inspire and educate.</p>
+            </section>
+            <section>
+                <h2>Mental Health Quizzes</h2>
+                <p>Engage with our quizzes to gain insights into your mental well-being. These self-assessment tools can help you identify areas to focus on for personal growth and healing.</p>
+            </section>
+            <section>
+                <h2>Personal Stories</h2>
+                <p>Read inspiring stories from individuals who have navigated mental health challenges. Their experiences offer hope and understanding, reminding you that you are not alone.</p>
+            </section>
+            <section>
+                <h2>Community Discussions</h2>
+                <p>Join our discussion forums to connect with others, share your experiences, and receive support. Building a community fosters connection and reduces feelings of isolation.</p>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <p>Join the Movement – Break the Stigma & Support Mental Health Awareness 💙</p>
+    </footer>
+    <script>
+        function toggleText(link) {
+            let moreText = link.previousElementSibling;
+            if (moreText.style.display === "none") {
+                moreText.style.display = "inline";
+                link.textContent = "Read Less";
+            } else {
+                moreText.style.display = "none";
+                link.textContent = "Read More";
+            }
+        }
+    </script>
+
+</body>
+</html>

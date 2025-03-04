@@ -65,6 +65,8 @@ main {
     max-width: 700px; /* Reduced max-width */
     margin: 5px auto;
     backdrop-filter: blur(8px); /* Slightly reduced blur */
+    /* Fade-in effect */
+    animation: fadeIn 1s ease-out;
 }
 
 /* Section Heading */
@@ -266,3 +268,11 @@ nav ul li a:hover {
     transform: scale(1.1); /* Slight zoom effect for emphasis */
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
